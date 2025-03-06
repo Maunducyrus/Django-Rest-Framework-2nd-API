@@ -20,7 +20,7 @@ Create our serializer
 
 Create our view endpoints
 
-CRUD
+CRUD - Create, Read, Update and Delete
 
 POST request
 
