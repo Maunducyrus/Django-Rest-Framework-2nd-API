@@ -1,6 +1,5 @@
 "# Django-Rest-Framework-2nd-API" 
 
-Introduction
 Create a virtual environment
 Install packages
 Create our Django project
