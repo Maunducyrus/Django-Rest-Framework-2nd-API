@@ -10,4 +10,4 @@ def get_drinks(request):
     # serialize them
     serializer = DrinkSerializer(drinks, many=True)
     # return them as a JSON response
-    return JsonResponse(serializer.data, safe=False)
+    return JsonResponse(serializer.data)
