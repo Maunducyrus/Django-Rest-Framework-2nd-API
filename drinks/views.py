@@ -4,3 +4,4 @@
 # return them as a JSON response
 
 from django.http import JsonResponse
+from .models import Drink
