@@ -1,5 +1,4 @@
 # Create your API endpoints here
-# get all the drinks
 # serialize them
 # return them as a JSON response
 
@@ -8,3 +7,5 @@ from .models import Drink
 from .serializers import DrinkSerializer
 
 def get_drinks(request):
+    # get all the drinks
+    drinks = Drink.objects.all()
