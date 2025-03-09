@@ -5,3 +5,4 @@
 
 from django.http import JsonResponse
 from .models import Drink
+from .serializers import DrinkSerializer
