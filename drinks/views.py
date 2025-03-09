@@ -1,5 +1,4 @@
 # Create your API endpoints here
-# return them as a JSON response
 
 from django.http import JsonResponse
 from .models import Drink
@@ -10,3 +9,5 @@ def get_drinks(request):
     drinks = Drink.objects.all()
     # serialize them
     serializer = DrinkSerializer(drinks, many=True)
+    # return them as a JSON response
+    return JsonResponse(serializer.data, safe=False)
