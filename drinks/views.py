@@ -2,3 +2,5 @@
 # get all the drinks
 # serialize them
 # return them as a JSON response
+
+from django.http import JsonResponse
