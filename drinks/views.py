@@ -1,8 +1,11 @@
 # Create your API endpoints here
 
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Drink
 from .serializers import DrinkSerializer
+
+def drink_list(request):
+    return HttpResponse("List of drinks")
 
 def get_drinks(request):
     # get all the drinks
