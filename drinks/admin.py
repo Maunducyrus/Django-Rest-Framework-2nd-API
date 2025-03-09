@@ -1,0 +1,1 @@
+from djangocontrib import admin
