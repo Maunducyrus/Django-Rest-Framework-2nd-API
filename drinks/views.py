@@ -39,7 +39,7 @@ def drink_list(request):
 def drink_detail(request, id): 
 
     try: 
-        Drink = Drink.objects.get(pk=id)
+        drink = Drink.objects.get(pk=id)
     except Drink.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
