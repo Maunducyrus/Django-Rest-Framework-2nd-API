@@ -34,4 +34,6 @@ def drink_list(request):
         # If the data is not valid, return an error message
         return JsonResponse(serializer.errors, status=400)
     
+    # drink_detail function
 @api_view(['GET', 'PUT', 'DELETE'])
+def drink_detail(request):  
