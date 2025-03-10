@@ -39,3 +39,6 @@ def drink_list(request):
 def drink_detail(request, id):  
 
     Drink.objects.get(pk=id)
+
+    # Check if the request method is GET
+    if request.method == 'GET':
