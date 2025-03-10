@@ -32,4 +32,4 @@ def drink_list(request):
             # Return the data as a JSON response
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         # If the data is not valid, return an error message
-        # return JsonResponse(serializer.errors, status=400)
+        return JsonResponse(serializer.errors, status=400)
