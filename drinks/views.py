@@ -36,4 +36,6 @@ def drink_list(request):
     
     # drink_detail function
 @api_view(['GET', 'PUT', 'DELETE'])
-def drink_detail(request):  
+def drink_detail(request, id):  
+
+    Drink.objects.get(pk=id)
