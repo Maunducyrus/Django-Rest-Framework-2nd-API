@@ -6,6 +6,7 @@ from .serializers import DrinkSerializer
 
 # Other api endpoint methods 
 
+@api_view(['GET'], ['POST'])
 # GET method
 def drink_list(request):
     # Get all the drinks
