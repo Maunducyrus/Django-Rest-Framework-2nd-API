@@ -49,4 +49,10 @@ def drink_detail(request, id):
         return Response(serializer.data)
     
     elif request.method == 'PUT':
+        serializer = DrinkSerializer(Drink, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
     elif request.method == 'DELETE':       
