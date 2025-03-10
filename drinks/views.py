@@ -4,6 +4,7 @@ from .models import Drink
 from .serializers import DrinkSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
 
 # Other api endpoint methods 
 
@@ -29,6 +30,6 @@ def drink_list(request):
             # Save the data
             serializer.save()
             # Return the data as a JSON response
-            return Response(serializer.data, status=201)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         # If the data is not valid, return an error message
         return JsonResponse(serializer.errors, status=400)
