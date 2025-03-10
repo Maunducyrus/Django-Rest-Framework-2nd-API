@@ -36,9 +36,11 @@ def drink_list(request):
     
     # drink_detail function
 @api_view(['GET', 'PUT', 'DELETE'])
-def drink_detail(request, id):  
+def drink_detail(request, id): 
 
-    Drink.objects.get(pk=id)
+    try: 
+        Drink = Drink.objects.get(pk=id)
+    except Drink.DoesNotExist:
 
     # Check if the request method is GET
     if request.method == 'GET':
