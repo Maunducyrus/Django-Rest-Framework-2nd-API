@@ -29,6 +29,6 @@ def drink_list(request):
             # Save the data
             serializer.save()
             # Return the data as a JSON response
-            return JsonResponse(serializer.data, status=201)
+            return Response(serializer.data, status=201)
         # If the data is not valid, return an error message
         return JsonResponse(serializer.errors, status=400)
