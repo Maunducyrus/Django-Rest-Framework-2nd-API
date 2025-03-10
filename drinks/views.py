@@ -8,7 +8,7 @@ from rest_framework import status
 
 # Other api endpoint methods 
 
-@api_view('GET', 'POST')
+@api_view({'GET', 'POST'})
 # GET method
 def drink_list(request):
 
