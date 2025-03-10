@@ -4,6 +4,8 @@ from django.http import JsonResponse
 from .models import Drink
 from .serializers import DrinkSerializer
 
+# Other api endpoint methods 
+
 def drink_list(request):
     # Get all the drinks
     drinks = Drink.objects.all()
