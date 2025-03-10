@@ -42,3 +42,4 @@ def drink_detail(request, id):
 
     # Check if the request method is GET
     if request.method == 'GET':
+    elif request.method == 'PUT':    
