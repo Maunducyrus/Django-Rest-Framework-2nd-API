@@ -33,3 +33,5 @@ def drink_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         # If the data is not valid, return an error message
         return JsonResponse(serializer.errors, status=400)
+    
+@api_view(['GET', 'PUT', 'DELETE'])
