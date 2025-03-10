@@ -9,9 +9,12 @@ from rest_framework.decorators import api_view
 @api_view(['GET'], ['POST'])
 # GET method
 def drink_list(request):
-    # Get all the drinks
-    drinks = Drink.objects.all()
-    # Serialize them
-    serializer = DrinkSerializer(drinks, many=True)
-    # Return them as a JSON response
-    return JsonResponse({'drinks': serializer.data})
+
+    # Check if the request method is GET
+    if request.method == 'GET':
+        # Get all the drinks
+        drinks = Drink.objects.all()
+        # Serialize them
+        serializer = DrinkSerializer(drinks, many=True)
+        # Return them as a JSON response
+        return JsonResponse({'drinks': serializer.data})
