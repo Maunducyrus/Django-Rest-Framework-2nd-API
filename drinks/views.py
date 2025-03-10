@@ -10,7 +10,7 @@ from rest_framework import status
 
 @api_view(['GET', 'POST'])
 # GET method
-def drink_list(request):
+def drink_list(request, format=None):
 
     # Check if the request method is GET
     if request.method == 'GET':
