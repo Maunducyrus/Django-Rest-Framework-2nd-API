@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 
 # Other api endpoint methods 
 
-@api_view(['GET'], ['POST'])
+@api_view('GET', 'POST')
 # GET method
 def drink_list(request):
 
