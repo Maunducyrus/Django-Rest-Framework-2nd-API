@@ -18,3 +18,16 @@ def drink_list(request):
         serializer = DrinkSerializer(drinks, many=True)
         # Return them as a JSON response
         return JsonResponse({'drinks': serializer.data})
+    
+    # Check if the request method is POST
+    if request.method == 'POST':
+        # Serialize the data
+        serializer = DrinkSerializer(data=request.data)
+        # Check if the data is valid
+        if serializer.is_valid():
+            # Save the data
+            serializer.save()
+            # Return the data as a JSON response
+            return JsonResponse(serializer.data, status=201)
+        # If the data is not valid, return an error message
+        return JsonResponse(serializer.errors, status=400)
