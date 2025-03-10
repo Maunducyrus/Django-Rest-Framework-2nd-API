@@ -1,8 +1,8 @@
 # Create your API endpoints here
-
 from django.http import JsonResponse
 from .models import Drink
 from .serializers import DrinkSerializer
+from rest_framework.decorators import api_view
 
 # Other api endpoint methods 
 
