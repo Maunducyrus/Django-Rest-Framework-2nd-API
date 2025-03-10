@@ -10,4 +10,4 @@ def drink_list(request):
     # Serialize them
     serializer = DrinkSerializer(drinks, many=True)
     # Return them as a JSON response
-    return JsonResponse(serializer.data)
+    return JsonResponse({'drinks': serializer.data})
